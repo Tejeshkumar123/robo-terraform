@@ -9,5 +9,5 @@ variable "list" {
   default = ["aws","devops","cloud"]
 }
 output "list_output" {
-  value = var.list [3]
+  value = var.list[2]
 }
