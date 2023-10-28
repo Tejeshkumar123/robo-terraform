@@ -17,7 +17,7 @@ variable "map" {
   default = {
     devops = {
       time = "10am"
-      duration ="9r0 days"
+      duration ="90 days"
     }
     aws = {
       time = "11 am"
