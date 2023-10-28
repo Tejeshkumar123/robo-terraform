@@ -26,5 +26,5 @@ variable "map" {
   }
 }
 output "map_outputs" {
-  value = var.map
+  value = var.map["aws"]
 }
