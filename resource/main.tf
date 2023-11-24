@@ -1,6 +1,7 @@
 resource "aws_instance" "web" {
-  ami           = "ami-03265a0778a880afb"
+  ami           = data.aws_ami.example.id
   instance_type = "t2.micro"
+  security_groups = [aws_security_group.hima.name]
 
   tags = {
     Name = "sindhu"
