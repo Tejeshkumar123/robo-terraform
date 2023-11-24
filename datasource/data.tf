@@ -3,5 +3,14 @@ data "aws_ec2_spot_price" "example" {
   availability_zone = "us-east-1a"
 }
 output "t2_micro_spot_price" {
-  value = data.aws_ec2_spot_price.example.spot_price
+  value = data.aws_ec2_spot_price.example
 }
+data "aws_security_group" "selected" {
+  id = "sg-0a1bb0374a177c7cf"
+}
+output "allow_all_id" {
+  value = data.aws_security_group.selected.vpc_id
+}
+
+
+
