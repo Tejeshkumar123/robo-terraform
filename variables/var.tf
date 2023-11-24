@@ -28,3 +28,12 @@ variable "map" {
 output "map_outputs" {
   value = var.map["aws"]
 }
+#######while using run time#######
+variable "env" {}
+output "tfvar_output" {
+  value = "var.env"
+}
+variable "fruit" {}
+output "fruit" {
+  value = var.fruit
+}
