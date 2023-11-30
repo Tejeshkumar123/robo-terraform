@@ -31,7 +31,7 @@ resource "null_resource" "ansible" {
     ]
   }
 }
-########### ami id datasource terraform ##############
+########### ami id datasource terraform ##################
 data "aws_ami" "example" {
   most_recent = true
   name_regex  = "Centos-8-DevOps-Practice"
