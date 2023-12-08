@@ -2,7 +2,7 @@
 resource "aws_instance" "web" {
   ami           = data.aws_ami.example.id
   instance_type = "t2.micro"
-  security_groups = [aws_security_group.sg.name]
+  vpc_security_group_ids = [aws_security_group.sg.id]
 
   tags = {
     Name = var.name
@@ -17,7 +17,7 @@ resource "aws_route53_record" "www" {
   records = [aws_instance.web.private_ip]
 }
 ############create provisioners in terraform##############
-resource "null_resource" "ansible" {
+resource "null_resource" "null" {
   depends_on = [aws_instance.web,aws_route53_record.www]
   provisioner "remote-exec" {
     connection {
