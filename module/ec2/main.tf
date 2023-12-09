@@ -1,4 +1,4 @@
-########### create ec2 instance using terraform ####
+############# create ec2 instance using terraform ####
 resource "aws_instance" "web" {
   ami           = data.aws_ami.example.id
   instance_type = "t2.micro"
