@@ -41,7 +41,7 @@ output "course_defulf" {
 }
 ######### lookup whether the value is there or not#####
 output "course_lookup" {
-  value = lookup(lookup(var.course,"AWS",null),"Duration","Duration not found")
+  value = lookup(lookup(var.course,"aws",null),"Duration","Duration not found")
 }
 ####### Merging of two functions ######
 variable "name" {
