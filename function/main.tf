@@ -2,7 +2,7 @@
 variable "sa" {
   default = "apple"
 }
-output "" {
+output "s1" {
   value = upper(var.sa)
 }
 ####CEIL VALUE####
